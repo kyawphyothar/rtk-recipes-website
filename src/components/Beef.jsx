@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DisplayBeef from "./DisplayBeef";
 import { useGetBeefQuery } from "../redux/api/MealApi";
-import { Loader } from "@mantine/core";
+// import { Loader } from "@mantine/core";
 
 const Beef = () => {
   const [beef, setBeef] = useState([]);

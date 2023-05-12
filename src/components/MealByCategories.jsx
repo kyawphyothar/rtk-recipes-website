@@ -21,7 +21,7 @@ const MealByCategories = () => {
  
   return (
     <div className="mt-10 flex flex-col items-center gap-5">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center text-center">
         <h3 className=" text-xl text-gray-600 dark:text-white/75">We provide</h3>
         <h2 className=" text-3xl font-heading text-gray-700 tracking-wider font-semibold dark:text-white/80 ">
           Meals By Categories
@@ -44,7 +44,7 @@ const MealByCategories = () => {
                     alt=""
                     className=" select-none w-[150px] p-2 rounded-lg"
                   />
-                  <h1 className=" text-lg text-gray-600 font-medium">{meal?.strCategory}</h1>
+                  <h1 className=" text-lg text-gray-600 dark:text-white/80 font-medium">{meal?.strCategory}</h1>
                 </div>
               );
             })}

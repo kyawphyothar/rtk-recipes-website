@@ -7,11 +7,11 @@ import { Loader } from '@mantine/core';
 const Filter = () => {
   const [filterMeal,setFilterMeal] = useState([])
   const location = useLocation()
-  console.log(location);
+  // console.log(location);
   const strCategory = location?.state?.category
 
   const {data:meals , isLoading} = useFilterMealByCategoryQuery(strCategory)
-  console.log(meals);
+  // console.log(meals);
 
   useEffect(()=>{
     try {
