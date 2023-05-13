@@ -38,7 +38,7 @@ const Categories = () => {
           </label>
           <ul
             tabIndex={0}
-            className="dropdown-content  menu p-2 shadow bg-gray-200 dark:bg-black dark:text-white/80 rounded-box w-52"
+            className="dropdown-content  menu p-2 shadow bg-gray-200 dark:bg-gray-700 dark:text-white/80 rounded-box w-52"
           >
             {" "}
             <div className="scrollable overflow-y-auto h-60" >

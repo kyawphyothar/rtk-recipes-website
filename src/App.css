@@ -215,14 +215,21 @@ body {
   transform-origin: center;
 }
 
+/* for Cs-section */
+.cs-img{
+  border-radius:  25px 50px 25px 50px;
+}
 /* for categories */
-.custom-list-item:active {
-  background-color: #c9c9c9;
+li > a:active{
+  background-color: #636363;
+}
+/* .custom-list-item a :active {
+  color: #585656;
 }
 
 .custom-list-item:focus {
   background-color: #c9c9c9;
-}
+} */
 
 /* scroll to top */
 .scroll-button {

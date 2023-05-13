@@ -15,7 +15,7 @@ const FilterMeal = (props) => {
       >
         <img src={strMealThumb} alt="" className="w-[200px] FoodCardImg" />
         <div className="w-44 ">
-          <h3 className=" text-xl font-medium text-yellow-500">{strMeal}</h3>
+          <h3 className=" text-xl font-medium text-yellow-500">{strMeal.substring(0,30)+"..."}</h3>
         </div>
         <div className="FoodCardOverlay ">
           <Link to={`/detail/${idMeal}`}>

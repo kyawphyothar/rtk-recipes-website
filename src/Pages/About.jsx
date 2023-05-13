@@ -1,7 +1,9 @@
 import React from "react";
 import VegetablesPic from "/vegetables.jpg";
 import Curry from "/Curry.jpg";
+
 const About = () => {
+  
   return (
     <div className=" mt-20  lg:max-w-6xl ">
       <div className=" flex flex-wrap justify-around items-center gap-12">

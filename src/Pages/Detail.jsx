@@ -4,14 +4,13 @@ import { Link, useParams } from "react-router-dom";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { BsYoutube } from "react-icons/bs";
 import { Loader } from "@mantine/core";
-import { UseCustomProvider } from "./Context/DarkModeContext";
+import { UseCustomProvider } from "../components/Context/DarkModeContext";
 
 const Detail = () => {
   const [meal, setMeal] = useState([]);
-  const {theme} = UseCustomProvider()
+  const { theme } = UseCustomProvider();
   const { id } = useParams();
   const { data: meals, isLoading } = useGetDetailQuery(id);
-  // console.log(meals);
   useEffect(() => {
     try {
       if (meals && meals?.meals) {
@@ -34,15 +33,21 @@ const Detail = () => {
   return (
     <div className=" flex justify-center max-w-xl md:max-w-4xl lg:max-w-7xl p-5 mt-20">
       <div className="flex flex-col gap-10  ">
-        <div className="flex gap-2 items-center " style={{color:"#F63E04"}}>
+        <div className="flex gap-2 items-center " style={{ color: "#F63E04" }}>
           <Link to={"/recipes"}>
             <p className=" text-lg mb-1">
               <MdArrowBackIosNew />
             </p>
           </Link>
-          <h1 className=" text-2xl md:text-4xl font-semibold">{singleMeal?.strMeal}</h1>
+          <h1 className=" text-2xl md:text-4xl font-semibold">
+            {singleMeal?.strMeal}
+          </h1>
         </div>
-        <div className={`${ theme === "dark" ? "detailCard-dark" : "detailCard"} w-[300px] sm:w-[400px] md:w-[550px] flex gap-3 md:gap-5 `}>
+        <div
+          className={`${
+            theme === "dark" ? "detailCard-dark" : "detailCard"
+          } w-[300px] sm:w-[400px] md:w-[500px] flex gap-3 md:gap-5 `}
+        >
           <img
             src={singleMeal?.strMealThumb}
             alt=""
@@ -87,7 +92,7 @@ const Detail = () => {
                 ))}
           </ul>
         </div>
-        <div className="w-[300px] md:w-[600px] p-5 flex flex-col gap-3">
+        <div className="w-[300px] md:w-[600px]  flex flex-col gap-3">
           <h3 className=" text-orange-500  font-semibold  text-2xl">
             Instructions
           </h3>
@@ -101,7 +106,7 @@ const Detail = () => {
             <a
               href={singleMeal?.strYoutube}
               target="_blank"
-              className="text-red-500 text-3xl"
+              className="text-red-500 dark:text-red-600 text-3xl"
             >
               <BsYoutube />
             </a>

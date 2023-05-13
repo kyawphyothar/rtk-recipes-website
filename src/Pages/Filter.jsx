@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useFilterMealByCategoryQuery } from '../redux/api/MealApi';
-import FilterMeal from './FilterMeal';
+import FilterMeal from '../components/FilterMeal';
 import { Loader } from '@mantine/core';
 
 const Filter = () => {
