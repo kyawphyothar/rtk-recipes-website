@@ -7,11 +7,11 @@ import { Loader } from "@mantine/core";
 const Search = () => {
   const [searchMeal, setSearchMeal] = useState([]);
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   const meal = location.state.searchValue;
   //  console.log(meal);
   const { data: meals, isLoading } = useGetSearchedMealQuery(meal);
-  console.log(meals);
+  // console.log(meals);
 
   useEffect(() => {
     try {
