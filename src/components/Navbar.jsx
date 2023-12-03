@@ -39,9 +39,9 @@ const Navbar = () => {
   };
   return (
     <div className=" sticky top-0 z-50 dark:bg-[#212227]  bg-white/30 backdrop-blur-lg shadow-lg p-5">
-      <div className="flex justify-around item-center align-middle">
+      <div className="flex justify-around items-baseline md:items-center align-middle">
         <Link to={"/"}>
-          <h1 className="text-xl font-medium  text-orange-600 dark:text-orange-500">
+          <h1 className=" text-sm md:text-xl font-medium  text-orange-600 dark:text-orange-500">
             Cook's Corner
           </h1>
         </Link>
