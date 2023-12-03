@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const RecipeIntro = () => {
   return (
     <div>
-        <div className="">
+        <div className="px-2">
           <div className=" text-orange-600  flex gap-1 items-center align-baseline">
             <Link to={"/"}>
               <p className="text-lg cursor-pointer select-none mb-1">

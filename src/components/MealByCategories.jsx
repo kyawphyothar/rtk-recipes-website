@@ -9,21 +9,6 @@ const MealByCategories = () => {
   const { data: categories, isLoading } = useGetMealCategoryQuery();
   const { theme } = UseCustomProvider();
 
-  // useEffect(() => {
-  //   ScrollReveal().reveal(".animate", {
-  //     delay: 1400,
-  //     origin: "bottom",
-  //     distance: "150px",
-  //     interval: 1000,
-  //   });
-  //   // ScrollReveal().reveal(".animate2", {
-  //   //   delay: 1600,
-  //   //   origin: "bottom",
-  //   //   distance: "100px",
-  //   //   interval: 800,
-  //   // });
-  // }, []);
-
   useEffect(() => {
     try {
       if (categories && categories.categories) {
@@ -33,7 +18,7 @@ const MealByCategories = () => {
       console.log(error);
     }
   }, [categories]);
-  //  console.log(meals);
+   console.log(categories);
 
   return (
     <div className="mt-10 flex flex-col items-center gap-5 ">

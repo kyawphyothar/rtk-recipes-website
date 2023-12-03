@@ -19,10 +19,10 @@ const Recipes = () => {
   return (
     <>
       <div className="">
-        <div className="flex flex-col">
-          <div className="flex flex-col gap-16 p-3 md:p-6">
-            <div className="ml-12 md:ml-18 lg:ml-20 mr-4 flex flex-wrap items-center justify-between gap-5 p-3 mt-20">
-              <RecipeIntro />
+        <div className="flex flex-col items-center">
+          <div className="flex flex-col gap-10">
+            <div className=" max-w-sm md:max-w-7xl flex flex-row flex-wrap items-center xl:justify-around px-4 mt-20">
+              <RecipeIntro  />
               <Categories />
             </div>
             <div className="">

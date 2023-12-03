@@ -8,6 +8,9 @@ const FilterMeal = (props) => {
   const { idMeal, strMeal, strMealThumb } = props;
   return (
     <div>
+      <div className="">
+        
+      </div>
       <div
         className={`${
           theme === "dark" ? "FoodCard-dark" : "FoodCard"

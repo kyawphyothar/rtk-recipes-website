@@ -2,15 +2,19 @@ import React, { useEffect, useState } from "react";
 import { useGetDetailQuery } from "../redux/api/MealApi";
 import { Link, useParams } from "react-router-dom";
 import { MdArrowBackIosNew } from "react-icons/md";
-import { BsYoutube } from "react-icons/bs";
 import { Loader } from "@mantine/core";
 import { UseCustomProvider } from "../components/Context/DarkModeContext";
+import Guide from "./Guide";
 
 const Detail = () => {
   const [meal, setMeal] = useState([]);
   const { theme } = UseCustomProvider();
   const { id } = useParams();
   const { data: meals, isLoading } = useGetDetailQuery(id);
+  const [instructions, setInstructions] = useState(true);
+  const [ingredients, setIngredients] = useState(false);
+  
+
   useEffect(() => {
     try {
       if (meals && meals?.meals) {
@@ -30,8 +34,9 @@ const Detail = () => {
     );
   }
 
+  
   return (
-    <div className=" flex justify-center max-w-xl md:max-w-4xl lg:max-w-7xl p-5 mt-20">
+    <div className=" flex justify-center max-w-lg md:max-w-5xl lg:max-w-7xl p-3 mt-20">
       <div className="flex flex-col gap-10  ">
         <div className="flex gap-2 items-center " style={{ color: "#F63E04" }}>
           <Link to={"/recipes"}>
@@ -70,48 +75,7 @@ const Detail = () => {
             </div>
           </div>
         </div>
-        <div className=" flex flex-col gap-3">
-          <h3 className=" text-orange-500  text-2xl font-semibold">
-            Ingredients
-          </h3>
-          <ul className="list-disc text-gray-500 dark:text-white/75 text-lg pl-6">
-            {singleMeal &&
-              Object.keys(singleMeal)
-                .filter(
-                  (key) => key.startsWith("strIngredient") && singleMeal[key]
-                )
-                .map((key) => (
-                  <li key={key}>
-                    {singleMeal[key]} -{" "}
-                    {
-                      singleMeal[
-                        `strMeasure${key.slice("strIngredient".length)}`
-                      ]
-                    }
-                  </li>
-                ))}
-          </ul>
-        </div>
-        <div className="w-[300px] md:w-[600px]  flex flex-col gap-3">
-          <h3 className=" text-orange-500  font-semibold  text-2xl">
-            Instructions
-          </h3>
-          <p className="text-lg text-gray-500 dark:text-white/75 tracking-wide leading-7">
-            {singleMeal?.strInstructions}
-          </p>
-          <div className="">
-            <p className="text-lg font-medium text-gray-600 dark:text-white/80">
-              Watch on YouTube:{" "}
-            </p>
-            <a
-              href={singleMeal?.strYoutube}
-              target="_blank"
-              className="text-red-500 dark:text-red-600 text-3xl"
-            >
-              <BsYoutube />
-            </a>
-          </div>
-        </div>
+        <Guide className=" justify-self-start" instructionsProp={instructions} setInstructionsProp={setInstructions} ingredientsProp={ingredients} setIngredientsProp={setIngredients} singleMeal={singleMeal} />
       </div>
     </div>
   );
