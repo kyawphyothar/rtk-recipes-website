@@ -21,7 +21,7 @@ const Recipes = () => {
       <div className="">
         <div className="flex flex-col items-center">
           <div className="flex flex-col gap-10">
-            <div className=" max-w-sm md:max-w-7xl flex flex-row flex-wrap items-center xl:justify-around px-4 mt-20">
+            <div className=" max-w-sm md:max-w-7xl flex flex-row flex-wrap items-center md:justify-between xl:justify-around px-6 xl:px-4 mt-20">
               <RecipeIntro  />
               <Categories />
             </div>
