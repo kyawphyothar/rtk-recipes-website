@@ -49,7 +49,7 @@ const Navbar = () => {
           <div className="">
             <form onSubmit={onSubmitHandler} className="">
               <Input
-                placeholder="Search.."
+                placeholder="Search Recipes.."
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
                 styles={(theme) => ({
@@ -85,7 +85,7 @@ const Navbar = () => {
                 isOpened === true ? "hidden" : "block"
               } z-50 dropdown-animate`}
             >
-              <div className="dropdown-content dark:bg-gray-800 dark:text-white/80 bg-white shadow-lg rounded w-40 flex flex-col items-center gap-1 p-2 tabIndex={0}">
+              <div className="dropdown-content dark:bg-gray-800 dark:text-white/80 bg-white shadow-lg rounded-xl w-40 h-28 flex flex-col items-center justify-center gap-1 p-2 tabIndex={0}">
                 <Link to={"/"}>
                   <h3 className="">Home</h3>
                 </Link>

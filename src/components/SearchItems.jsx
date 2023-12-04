@@ -12,7 +12,7 @@ const SearchItems = (props) => {
         <div
           className={`${
             theme === "dark" ? "FoodCard-dark" : "FoodCard"
-          }  relative overflow-hidden  w-[200px] h-[280px]  flex flex-col gap-3 items-center`}
+          }  relative overflow-hidden  w-[300px] h-[200px] md:w-[200px] md:h-[280px]  flex flex-col gap-3 items-center`}
         >
           <img src={strMealThumb} alt="" className="w-[200px] FoodCardImg" />
           <div className="w-44 ">
@@ -20,13 +20,13 @@ const SearchItems = (props) => {
               {strMeal.substring(0, 30) + "..."}
             </h3>
           </div>
-          <div className="FoodCardOverlay">
-            <Link to={`/detail/${idMeal}`}>
-              <button className="bg-orange-400  hover:bg-orange-500 px-2 py-1 rounded-3xl text-white">
-                View Recipes
-              </button>
-            </Link>
-          </div>
+          <div className="w-[300px] h-[200px] md:w-[200px] md:h-[280px] flex justify-center items-center absolute bg-white/10 group hover:backdrop-blur-sm">
+          <Link to={`/detail/${idMeal}`}>
+            <button className="bg-orange-400 hover:bg-orange-500 px-2 py-1 rounded-3xl text-white food-card-button opacity-0 group-hover:opacity-100 transition-opacity">
+              View Recipes
+            </button>
+          </Link>
+        </div>
         </div>
       </div>
     </div>

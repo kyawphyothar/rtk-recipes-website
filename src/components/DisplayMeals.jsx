@@ -12,15 +12,19 @@ const DisplayMeals = (props) => {
           theme === "dark" ? "FoodCard-dark" : "FoodCard"
         }  relative overflow-hidden w-[300px] h-[200px] md:w-[200px] md:h-[280px] flex flex-row md:flex-col md:gap-3 items-center `}
       >
-        <img src={strMealThumb} alt="" className="w-[150px] h-[200px] object-cover md:w-[200px] md:FoodCardImg" />
+        <img
+          src={strMealThumb}
+          alt=""
+          className="w-[150px] h-[200px] object-cover md:w-[200px] md:FoodCardImg"
+        />
         <div className="w-44 ">
           <h3 className=" text-xl font-medium text-yellow-500 text-center">
             {strMeal.substring(0, 25) + "..."}
           </h3>
         </div>
-        <div className="FoodCardOverlay ">
+        <div className="w-[300px] h-[200px] md:w-[200px] md:h-[280px] flex justify-center items-center absolute bg-white/10 group hover:backdrop-blur-sm">
           <Link to={`/detail/${idMeal}`}>
-            <button className="bg-orange-400 hover:bg-orange-500 px-2 py-1 rounded-3xl text-white">
+            <button className="bg-orange-400 hover:bg-orange-500 px-2 py-1 rounded-3xl text-white food-card-button opacity-0 group-hover:opacity-100 transition-opacity">
               View Recipes
             </button>
           </Link>

@@ -53,7 +53,6 @@ body {
 .carousel-parent-dark {
   border-radius: 52px;
   background: linear-gradient(145deg, #7f7f7f, #8b8b8b);
-  /* box-shadow: 8px 8px 16px #dedede, -8px -8px 16px #ffffff; */
 }
 .carousel-custom {
   animation: scroll 12s linear infinite;
@@ -74,19 +73,11 @@ body {
   border-radius: 3rem;
 }
 
-
 /* DropDown */
 .dropdown-animate {
   transform: translateY(10px);
   transition: 5s;
 }
-
-/* hero-section */
-/* .hero-container {
-  border-radius: 42px;
-  background: #ffffff;
-  box-shadow: 20px 20px 19px #dbdbdb, -20px -20px 19px #ffffff;
-} */
 
 .hero-img {
   border-radius: 31% 69% 69% 31% / 33% 34% 66% 67%;
@@ -104,14 +95,12 @@ body {
   border-radius: 42px;
   background: #ffffff;
   box-shadow: 8px 8px 19px #dbdbdb, -8px -8px 19px #ffffff;
-  transition: 0.5s;
+  transition: 1s;
 }
 
 .FoodCard-dark {
   border-radius: 42px;
   background: #262626e1;
-  /* box-shadow: 8px 8px 19px #000000, -8px -8px 19px #000000; */
-  /* transition: 0.5s; */
 }
 
 .FoodCardImg {
@@ -119,35 +108,8 @@ body {
 }
 
 .FoodCardOverlay {
-  opacity: 0;
-  position: absolute;
-  background-color: rgba(175, 175, 175, 0.656);
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 280px;
-  overflow: hidden;
-  border-radius: 30px 30px 39px 42px;
-  transition: 0.5s;
+  transition: 1s;
 }
-
-/* .FoodCard:hover {
-  transform: translateY(5px);
-} */
-
-.FoodCard:hover .FoodCardOverlay {
-  opacity: 1;
-}
-
-/* .FoodCard-dark:hover {
-  transform: translateY(5px);
-} */
-
-.FoodCard-dark:hover .FoodCardOverlay {
-  opacity: 1;
-}
-
 
 /* detail */
 
@@ -160,17 +122,11 @@ body {
 .detailCard-dark {
   border-radius: 42px;
   background: #777777ed;
-  /* box-shadow: 8px 8px 19px #dbdbdb, -8px -8px 19px #ffffff; */
 }
 
 .detailCardImg {
   border-radius: 42px 0 0 42px;
 }
-
-/* className={`${
-  theme === "dark" ? "FoodCard-dark" : "FoodCard"
-}  relative overflow-hidden  w-[200px] h-[280px]  flex flex-col gap-3 items-center`} */
-/*for services */
 
 .serviceCard {
   border-radius: 30px;
@@ -181,7 +137,6 @@ body {
 .serviceCard-dark {
   border-radius: 30px;
   background: linear-gradient(145deg, #7a7a7a, #818181);
-  /* box-shadow: 20px 20px 47px #c9c9c9, -20px -20px 47px #ffffff; */
 }
 
 .serviceCardImg {
@@ -216,20 +171,13 @@ body {
 }
 
 /* for Cs-section */
-.cs-img{
-  border-radius:  25px 50px 25px 50px;
+.cs-img {
+  border-radius: 25px 50px 25px 50px;
 }
 /* for categories */
-li > a:active{
+li > a:active {
   background-color: #636363;
 }
-/* .custom-list-item a :active {
-  color: #585656;
-}
-
-.custom-list-item:focus {
-  background-color: #c9c9c9;
-} */
 
 /* scroll to top */
 .scroll-button {
