@@ -1,44 +1,45 @@
-import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
-import { useFilterMealByCategoryQuery } from '../redux/api/MealApi';
-import FilterMeal from '../components/FilterMeal';
-import { Loader } from '@mantine/core';
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useFilterMealByCategoryQuery } from "../redux/api/MealApi";
+import FilterMeal from "../components/FilterMeal";
+import { Loader } from "@mantine/core";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 const Filter = () => {
-  const [filterMeal,setFilterMeal] = useState([])
-  const location = useLocation()
+  const [filterMeal, setFilterMeal] = useState([]);
+  const location = useLocation();
   // console.log(location);
-  const strCategory = location?.state?.category
+  const strCategory = location?.state?.category;
 
-  const {data:meals , isLoading} = useFilterMealByCategoryQuery(strCategory)
+  const { data: meals, isLoading } = useFilterMealByCategoryQuery(strCategory);
   // console.log(meals);
 
-  useEffect(()=>{
+  useEffect(() => {
     try {
-      if (meals&&meals.meals) {
-        setFilterMeal(meals.meals)
+      if (meals && meals.meals) {
+        setFilterMeal(meals.meals);
       }
     } catch (error) {
       console.log(error);
     }
-  },[meals])
+  }, [meals]);
 
   if (isLoading) {
     return (
       <div className=" flex justify-center items-center h-screen">
-        <Loader color='orange' variant="bars" size="lg"/>
+        <Loader color="orange" variant="bars" size="lg" />
       </div>
-    )
+    );
   }
   return (
-    <div className=' flex flex-wrap justify-center gap-10 mt-20 '>
-        {
-          filterMeal?.map((meal)=>{
-            return <FilterMeal key={meal?.idMeal} {...meal}/>
-          })
-        }
+    <div className=" flex flex-col items-center mt-20 gap-10">
+      <div className="flex gap-10 justify-center flex-wrap xl:max-w-6xl">
+        {filterMeal?.map((meal) => {
+          return <FilterMeal key={meal?.idMeal} {...meal} />;
+        })}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;

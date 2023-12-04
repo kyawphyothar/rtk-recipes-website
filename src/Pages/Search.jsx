@@ -52,8 +52,8 @@ const Search = () => {
   }
 
   return (
-    <div>
-      <div className="mt-20 flex flex-wrap justify-center gap-10">
+    <div className=" flex flex-col items-center">
+      <div className="mt-20 flex gap-10 justify-center flex-wrap xl:max-w-6xl">
         {searchMeal?.map((meal) => {
           return <SearchItems key={meal?.idMeal} {...meal} />;
         })}

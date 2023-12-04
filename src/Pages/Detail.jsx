@@ -36,11 +36,11 @@ const Detail = () => {
 
   
   return (
-    <div className=" flex justify-center max-w-lg md:max-w-5xl lg:max-w-7xl p-3 mt-20">
-      <div className="flex flex-col gap-10  ">
-        <div className="flex gap-2 items-center " style={{ color: "#F63E04" }}>
+    <div className=" mt-20 flex flex-col gap-10 items-center justify-center">
+      <div className="flex flex-col gap-5 ">
+        <div className="flex gap-3 items-baseline max-w-lg " style={{ color: "#F63E04" }}>
           <Link to={"/recipes"}>
-            <p className=" text-lg mb-1">
+            <p className=" text-2xl">
               <MdArrowBackIosNew />
             </p>
           </Link>
@@ -75,8 +75,8 @@ const Detail = () => {
             </div>
           </div>
         </div>
-        <Guide className=" justify-self-start" instructionsProp={instructions} setInstructionsProp={setInstructions} ingredientsProp={ingredients} setIngredientsProp={setIngredients} singleMeal={singleMeal} />
       </div>
+        <Guide className=" justify-self-start" instructionsProp={instructions} setInstructionsProp={setInstructions} ingredientsProp={ingredients} setIngredientsProp={setIngredients} singleMeal={singleMeal} />
     </div>
   );
 };
